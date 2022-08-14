@@ -3,7 +3,7 @@ rup = int(input("ENTER THE AMOUNT : "))
 print("YOU HAVE RUPEES : ",rup)
 
 #assigning the price of onioin & tomato
-price_onion = 200
+price_onion = 2000
 price_tomato = 10.5
 print("Price of 1kg Onion is ",price_onion," & Price of 1kg tomato is ",price_tomato)
 
