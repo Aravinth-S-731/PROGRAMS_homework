@@ -24,10 +24,10 @@ if (count_sandwich > 1) or (count_vadai > 2):
 
     #total price for products
     total_price = (price_coffee) + (price_vadai) + (price_sandwich) + (price_coke)
-    #the reason for finding the total price after 1st if condition is because there is a price change in the loop
+    #the reason for finding the total price after 1st if condition is because there is a price change in the if condition
 
 #elif condition to give 20% discount if count of each item is one or greater    
-elif (count_coffee >= 1)|(count_vadai >= 1)|(count_sandwich >= 1)|(count_coke >= 1):
+elif (count_coffee >= 1) and (count_vadai >= 1) and (count_sandwich >= 1) and (count_coke >= 1):
     total_price = total_price - (total_price * (20 / 100))
 
 #elif condition to check the total price is greater than 1000 to give 20% discount
