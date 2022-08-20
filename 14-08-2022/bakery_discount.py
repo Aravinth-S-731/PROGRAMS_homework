@@ -35,6 +35,8 @@ if (count_sandwich > 1) or (count_vadai > 2):
     elif(total_price > 1000):
         total_price = total_price - (total_price * (20/100))
         print("ALSO YOU GET A DISCOUT OF 20 PERCENT OF YOUR TOTAL AMMOUNT")
+    else:
+        None
 
 #elif condition to give 20% discount if count of each item is one or greater    
 elif (count_coffee >= 1) and (count_vadai >= 1) and (count_sandwich >= 1) and (count_coke >= 1):
