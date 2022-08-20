@@ -28,7 +28,11 @@ if (count_sandwich > 1) or (count_vadai > 2):
 
     print("\nYOU GET A DISCOUNT OF RUPEES 10 FOR YOUR EACH COFFEE")
 
-    if(total_price > 1000):
+    #discount after reducing the price of cofee to 50 rupees
+    if(count_coffee >= 1) and (count_vadai >= 1) and (count_sandwich >= 1) and (count_coke >= 1):
+        total_price = total_price - (total_price * (20/100))
+        print("ALSO YOU GET A DISCOUT OF 20 PERCENT FOR ORDERING EACH OF EVERY ITEM")
+    elif(total_price > 1000):
         total_price = total_price - (total_price * (20/100))
         print("ALSO YOU GET A DISCOUT OF 20 PERCENT OF YOUR TOTAL AMMOUNT")
 
