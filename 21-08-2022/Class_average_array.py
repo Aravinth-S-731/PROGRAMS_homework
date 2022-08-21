@@ -5,7 +5,6 @@ total_mark = 0
 student_count = 0
 option = "y"
 
-
 for i in range (0,student_count+1): # +1 for considering the last value
     while(option == "y"):
         student_count += 1      #to count no of studnets  
