@@ -25,7 +25,6 @@ if (count_sandwich > 1) or (count_vadai > 2):
     #total price for products
     total_price = (price_coffee) + (price_vadai) + (price_sandwich) + (price_coke)
     #the reason for finding the total price after 1st if condition is because there is a price change in the if condition
-
     print("\nYOU GET A DISCOUNT OF RUPEES 10 FOR YOUR EACH COFFEE")
 
     #discount after reducing the price of cofee to 50 rupees
