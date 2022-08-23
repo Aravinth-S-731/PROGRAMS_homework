@@ -15,10 +15,12 @@ while(customer <= transaction):
         break
     customer += 1   #to count the customers
     for i in range(0,noofdishes):
-        no_of_items = int(input( str(dish[i])+ " COSTS RUPEES : " +str(cost[i])+ " HOW MANY DO U WANT : "))
-        #condition to check the supply 
-        if(end_supply[i] > 0):
-            end_supply[i] -= no_of_items
+        if(end_supply[i] > 0):  #condition to check the supply 
+            no_of_items = int(input( str(dish[i])+ " COSTS RUPEES : " +str(cost[i])+ " HOW MANY DO U WANT : "))
+            if(end_supply[i] - no_of_items >= 0):
+                end_supply[i] -= no_of_items
+            else:
+                print("NOT ENOUGH QUANTITY")
         else:
             print(dish[i]," IS SOLD OUT")
     #input given by user to continue or end
@@ -51,3 +53,24 @@ for i in range(0,noofdishes):
 # BREAD   SOLD : 15  -REMAINING : 35      ,INCOME IS : Rs. 450
 # COFFEE  SOLD : 13  -REMAINING : 57      ,INCOME IS : Rs. 195
 # COKE    SOLD : 11  -REMAINING : 89      ,INCOME IS : Rs. 330
+# ---------- OUTPUT ----------
+# PUFFS COSTS RUPEES : 20 HOW MANY DO U WANT : 40
+# CAKE COSTS RUPEES : 30 HOW MANY DO U WANT : 40
+# BREAD COSTS RUPEES : 30 HOW MANY DO U WANT : 40
+# COFFEE COSTS RUPEES : 15 HOW MANY DO U WANT : 40
+# COKE COSTS RUPEES : 30 HOW MANY DO U WANT : 40
+# REMAINING TRANSACTIONS 9 DO U WANT TO CONTINUE (y/n) : y
+# PUFFS COSTS RUPEES : 20 HOW MANY DO U WANT : 10
+# CAKE COSTS RUPEES : 30 HOW MANY DO U WANT : 11
+# NOT ENOUGH QUANTITY
+# BREAD COSTS RUPEES : 30 HOW MANY DO U WANT : 5
+# COFFEE COSTS RUPEES : 15 HOW MANY DO U WANT : 5
+# COKE COSTS RUPEES : 30 HOW MANY DO U WANT : 5
+# REMAINING TRANSACTIONS 8 DO U WANT TO CONTINUE (y/n) : n
+
+
+# PUFFS   SOLD : 50  -REMAINING : 0       ,INCOME IS : Rs. 1000
+# CAKE    SOLD : 40  -REMAINING : 10      ,INCOME IS : Rs. 1200
+# BREAD   SOLD : 45  -REMAINING : 5       ,INCOME IS : Rs. 1350
+# COFFEE  SOLD : 45  -REMAINING : 25      ,INCOME IS : Rs. 675
+# COKE    SOLD : 45  -REMAINING : 55      ,INCOME IS : Rs. 1350
