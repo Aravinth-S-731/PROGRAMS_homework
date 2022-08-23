@@ -1,8 +1,8 @@
 #getting string as input and converting to array
 string1 = input("ENTER THE STRING-1 : ")
 string2 = input("ENTER THE STRING-2 : ")
-string1 = list(string1)
-string2 = list(string2)
+string1 = list(string1) #Input given is taken as string, whereas we need each and induvidual character so it is converted into list
+string2 = list(string2) #Input given is taken as string, whereas we need each and induvidual character so it is converted into list
 string1_length = len(string1)
 string2_length = len(string2)
 same_char_in_two_strings = [] #to store same charactres in two strings
