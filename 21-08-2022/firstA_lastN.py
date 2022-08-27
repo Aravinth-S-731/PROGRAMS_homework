@@ -24,7 +24,7 @@ if(index_length_a >=1 and index_length_n >= 1):
     start = index_of_a[0]
     end = index_of_n[-1]
     print("\nTHE VALUES BETWEEN TWO 'a' ARE")
-    for i in range(start+1,end):
+    for i in range(start+1,end):    #start+1 to stop 'a' from printing
         output_string.append(input_string[i])
 if(err_msg == True):
     print("\nTHERE IN ONLY ONE 'a' OR ONE 'n' / OR THERE IS NO 'a' OR 'n'")
