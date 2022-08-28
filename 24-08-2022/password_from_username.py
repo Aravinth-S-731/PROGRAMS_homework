@@ -1,5 +1,10 @@
+""" Check if the username and password is correct. 
+     Username should contain the char @  and '.com' or '.edu' or '.tech' or 'org' at the end.
+     passward is the first, third, and last 3 letters of the username followed by the first three letters of the 
+     name of the company mentioned in the username, followed by any 3 numbers.
+     eg username : myname@sayur.com. password - mnamesay123  
+"""
 import random
-""" Check if the username and password is correct."""
 print("USERNAME SHOULD CONTAIN '@' and '.com' OR '.edu' OR '.org' OR '.tech' AT THE END")
 #initial values
 at_postion = 0
@@ -51,23 +56,26 @@ else:
     else:
         None
 """
----------- OUTPUT:1 ----------
+---------- OUTPUT:1 ----------  (name less than 3 characters)
 USERNAME SHOULD CONTAIN '@' and '.com' OR '.edu' OR '.org' OR '.tech' AT THE END
 ENTER YOU USERNAME : ar@sethu.in 
 NAME MUST CONSISTS OF THREE CHARACTERS eg: myname@companyname.domain
----------- OUTPUT:2 ----------
+---------- OUTPUT:2 ----------  (no company name)
 USERNAME SHOULD CONTAIN '@' and '.com' OR '.edu' OR '.org' OR '.tech' AT THE END
 ENTER YOU USERNAME : aravinth@.com
 COMPANY NAME MUST NOT BE EMPTY eg: myname@companyname.domain
----------- OUTPUT:3 ----------
+---------- OUTPUT:3 ----------  (name less than 3 characters and no company name)
 USERNAME SHOULD CONTAIN '@' and '.com' OR '.edu' OR '.org' OR '.tech' AT THE END
 ENTER YOU USERNAME : ar@.com
 NAME MUST CONSISTS OF THREE CHARACTERS and COMPANY NAME MUST NOT BE EMPTY eg: myname@companyname.domain
----------- OUTPUT:4 ----------
+---------- OUTPUT:4 ----------  (no '@' or '.')
 USERNAME SHOULD CONTAIN '@' and '.com' OR '.edu' OR '.org' OR '.tech' AT THE END
 ENTER YOU USERNAME : aravinthsethu.com
 USERNAME MUST CONTAIN '@' AND A DOMAIN
----------- OUTPUT:5 ----------
+USERNAME SHOULD CONTAIN '@' and '.com' OR '.edu' OR '.org' OR '.tech' AT THE END
+ENTER YOU USERNAME : aravinth@sethu
+USERNAME MUST CONTAIN '@' AND A DOMAIN
+---------- OUTPUT:5 ----------  (successful execution)
 ENTER YOU USERNAME : aravinth@sethu.in
 USERNAME :  aravinth@sethu.in
 PASSWORD : aanthset890
