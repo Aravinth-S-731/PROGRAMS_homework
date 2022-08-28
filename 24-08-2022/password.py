@@ -32,7 +32,7 @@ print(password,"is",password_strength)
 ENTER YOUR PASSWORD WITH MINIMUM OF 8-CHARACTERS : asdf
 ENTER YOUR PASSWORD WITH MINIMUM OF 8-CHARACTERS : @aravinth@2002
 YOUR PASSWORD IS :  @aravinth@2002
-@aravinth@2003 is strong
+@aravinth@2002 is strong
 ---------- OUTPUT:2 ----------
 ENTER YOUR PASSWORD WITH MINIMUM OF 8-CHARACTERS : aravinth
 YOUR PASSWORD IS :  aravinth
