@@ -1,6 +1,3 @@
-from cgitb import strong
-
-
 alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrtsuvwxyz"  #initial characters in a password
 numbers = "0123456789"
 special_char = "!@#$%^&*()_+-=[],.<>/?\|~`':;"
