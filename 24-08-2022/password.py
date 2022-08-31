@@ -11,9 +11,9 @@ if(password_length >= 8):   #only if the password length is greater or equal to 
     for i in password:
         if(i in alphabets):     #for every alphabet increase the count of aphabet
             count_alpha += 1
-        if(i in numbers):       #for every number increase the count of alphabet
+        elif(i in numbers):       #for every number increase the count of alphabet
             count_num += 1
-        if(i in special_char):  #for every special character increase the count of special character
+        else:  #for every special character increase the count of special character
             count_spec +=1
 if (password_length >= 16) and (count_alpha >= 3) and (count_num>= 2) and (count_spec >= 1):    #to check very strong pasword
     password_strength = "VERY STRONG"
