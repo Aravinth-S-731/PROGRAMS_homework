@@ -1,6 +1,5 @@
 alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrtsuvwxyz"  #initial characters in a password
 numbers = "0123456789"
-special_char = "!@#$%^&*()_+-=[],.<>/?\|~`':;"
 count_alpha , count_num , count_spec = 0 , 0 , 0
 password = ""   #to store the password
 while(len(password) < 8):   #to get password until therer is 8 or more letters
