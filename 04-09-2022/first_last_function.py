@@ -13,21 +13,15 @@ starting_index = -1 #inital index
 ending_index = -1   #intial index
 errmsg = False      #to print error msg
 
-def find_a(index_of_a): #to find 'a' in the string
+def find_a_b_c(index_of_a,index_of_b,index_of_c): #to find 'a','b','c' in the string
     for index in range(0,length_input_string):
-        if (input_string[index] == "a" or input_string[index] == "A"):
+        if (input_string[index] == "a" or input_string[index] == "A"):  #if 'a' in string
             index_of_a.append((index))
-    return index_of_a
-def find_b(index_of_b): #to find 'b' in the string
-    for index in range(0,length_input_string):
-        if (input_string[index] == "b" or input_string[index] == "B"):
+        if (input_string[index] == "b" or input_string[index] == "B"):  #if 'b' in string
             index_of_b.append((index))
-    return index_of_b
-def find_c(index_of_c): #to find 'c' in the string
-    for index in range(0,length_input_string):
-        if (input_string[index] == "c" or input_string[index] == "C"):
+        if (input_string[index] == "c" or input_string[index] == "C"):  #if 'c' in string
             index_of_c.append((index))
-    return index_of_c
+    return index_of_a,index_of_b,index_of_c
 #to identify the starting index of charcters to printed
 def find_start_end_index(final_characters ,starting_index ,ending_index ,errmsg ,char):
     if(len(index_of_a) >= 2):   #if two or more 'a' is present 
@@ -52,9 +46,7 @@ def find_start_end_index(final_characters ,starting_index ,ending_index ,errmsg 
         print("THERE IS ONLY ONE (or) NO A , B or C")
     return final_characters,starting_index,ending_index,errmsg,char
 
-find_a(index_of_a)   #calling function to find 'a'
-find_b(index_of_b)   #calling function to find 'b'
-find_c(index_of_c)   #calling function to find 'c'
+find_a_b_c(index_of_a,index_of_b,index_of_c)   #calling function to find 'a','b','c'
 find_start_end_index(final_characters,starting_index,ending_index,errmsg,char)#calling to print output
 """
 ---------- OUTPUT:1 (a) ----------
