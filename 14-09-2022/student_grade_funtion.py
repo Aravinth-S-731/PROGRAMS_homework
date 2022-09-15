@@ -1,3 +1,6 @@
+"""1. Write an app to calculate Grades for students in each subject.Mark > 90 is A, > 80 is B, > 70 is C, > 60 is D. 
+anything less than 60 is fail.Write a function that returns the grade for one subject for all the students in the class.Also,
+ print the class avg grade."""
 student_count = 0               # to check how many students marks are collected
 #USING MULTI-DIMENSIONAL ARRAY
 marks = [[],[],[],[],[]]        #total subjects is - 5
