@@ -18,15 +18,16 @@ def get_marks():                #getting marks from user
 def subject_grade():            #to check student grade for the given subject
     for index in range(0,len(marks[check_subject-1])):  #len(marks[check_subject-1])-is given to find total students in one subject
         if marks[check_subject-1][index] > 90:  #if >90 'A' grade
-            print("STUDENT",index+1,"GOT 'A' GRADE IN SUBJECT",check_subject)
+            grade = "A-grade"
         elif marks[check_subject-1][index] > 80:#if >90 'B' grade
-            print("STUDENT",index+1,"GOT 'B' GRADE IN SUBJECT",check_subject)
+            grade = "B-grade"
         elif marks[check_subject-1][index] > 70:#if >70 'c' grade
-            print("STUDENT",index+1,"GOT 'C' GRADE IN SUBJECT",check_subject)
+            grade = "C-grade"
         elif marks[check_subject-1][index] > 60:#if >60 'D' grade
-            print("STUDENT",index+1,"GOT 'D' GRADE IN SUBJECT",check_subject)
+            grade = "D-grade"
         else:                                   #>= 60 fail 
-            print("STUDENT",index+1,"IS FAIL IN SUBJECT",check_subject)
+            grade = "FAIL"
+        print("STUDENT",index+1,"IS ",grade," IN SUBJECT",check_subject)
 
 while student_option == "y":    #whether user want to countiue entering student details
     get_marks()                 #calling get_marks() function
