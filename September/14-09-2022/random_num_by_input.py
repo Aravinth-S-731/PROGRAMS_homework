@@ -1,3 +1,5 @@
+"""write a function that generates a random number that is always divisible by the input number. 
+For eg, if input is 5, the randome number function should only generate numbers 5,20, 15, 75, etc."""
 import random                                       #random package
 x = int(input("ENTER THE NUMBER : "))                       #getting input from user
 start = x                                           #start of range
