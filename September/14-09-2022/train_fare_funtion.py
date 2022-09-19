@@ -12,18 +12,14 @@ def total_passengers():                                                         
 
 def ticket_booking():                                                           #to book tickets for the passengers
     global normal_passenger_cost,senior_passenger_cost,total_cost,ticket_type   #global variables
-    ticket_type = int(input("SELECTION OPTION :\n1.ONE WAY TICKET  (1000/-)\n2.WITH RETURN TICKET (1000/- + 750/-)\n"))
-    if ticket_type == 1:                                                        #for one way ticket
-        ticket_type = "ONE WAY TICKET"
-        normal_passenger_cost = normal_passenger_count * one_way_cost
-        senior_passenger_cost = (senior_passenger_count * one_way_cost) * 0.5   #50% off for senior
-    elif ticket_type == 2:                                                      #with return ticket
-        ticket_type = "TWO WAY TICKET"
-        normal_passenger_cost = normal_passenger_count * two_way_cost
-        senior_passenger_cost = (senior_passenger_count * two_way_cost) * 0.5   #50% off for senior
-    else:
-        print("Please select a proper option")                                  #other than above two options
-        ticket_booking()                                                        #call the function again/recursive function
+    ticket_type = "ONE WAY TICKET"                                              #ticket type for one way
+    normal_passenger_cost = normal_passenger_count * one_way_cost               #adult passenger one way ticket cost
+    senior_passenger_cost = (senior_passenger_count * one_way_cost ) * 0.5      #senior passenger one way ticket cost
+    option = input("DO YOU NEED RETURN TICKET? (COSTS EXTRA 750/-) [y/n] : ")   #if user need return ticket
+    if option == "y":
+        ticket_type = "TWO WAY TICKET"                                          #ticket type two way
+        normal_passenger_cost += (normal_passenger_count * two_way_cost)        #add extra 750/- for each passenger to existing cost
+        senior_passenger_cost += (senior_passenger_count * two_way_cost * 0.5)  #add extra 750/- for senior with 50% offer
     total_cost = normal_passenger_cost + senior_passenger_cost                  #total cost of all passengers
 
 def above_4_offer():                                                            #function for people above count 4
