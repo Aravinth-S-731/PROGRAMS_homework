@@ -2,7 +2,7 @@
 Adding a return ticket will cost Rs750 extra.Family of 4 or more gets 20% off. Senior rate is 50% off. """
 passengers_count,normal_passenger_count,senior_passenger_count = 0,0,0          #intial count
 normal_passenger_cost,senior_passenger_cost = 0,0                               #intial cost
-total_cost,one_way_cost , two_way_cost = 0 , 1000 , 1750                        #price of one and return ticket
+total_cost,one_way_cost , two_way_cost = 0 , 1000 , 750                        #price of one and return ticket
 
 def total_passengers():                                                         #to get the count of passengers
     global passengers_count , normal_passenger_count , senior_passenger_count   #declaring global variables
