@@ -1,0 +1,7 @@
+1. Student attendence system : This allows both the students and the teachers to monitor the attendence and the time. Using this one can easily monitor their attendence schedule.
+
+2. Chatbot : Elder people from rural area find to difficult to fill forms and get data from government service centers, a chatbot that helps them to find what they need by searcing the network and making it easier for them.
+
+3. Price comparison : Comparing the price of the product accross different E-Commerce sites and give the best result. It can be used to find the best result by Comparing the reviews.
+
+4. 

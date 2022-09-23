@@ -1,0 +1,9 @@
+Application Programming Interface(API):
+    Allows two or more computer program to communicate with each other using some protocols.
+
+5-public API's:
+    Youtube - Allows to surf accross tons of videos , upload it, download it etc. Youtube returns videos as result, User can access, modify or delete the content in the platform.
+    Google maps - Shows the geographical information with correct coordinates, allows one to search for a location. Google maps are commonly used for navigation.
+    cloud storage - It is a bridge between the users device and the database of the cloud. Cloud storages acts as a external storage for the users device.
+    ThinkSpeak - Live data monitoring and controlling API used in IoT platforms. ThinkSpeak is most commonly used to get data through IoT and store it in the cloud.
+    Stackoverflow - Acts as a communication platform for a large of users to ask and solve doubts and questions. Stackoverflow allows one to post a question or doubt and any one can solve and reply to the raised question
