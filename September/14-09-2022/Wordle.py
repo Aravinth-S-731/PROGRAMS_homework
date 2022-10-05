@@ -41,7 +41,7 @@ get_word()                                              #call the get_word funct
 if result == False:                                     #if attempts are over
     print("SORRY! YOU USED ALL YOUR ATTEMPTS. THE WORD IS :",word_genarated)
 else:                                                   #if user found the word
-    print("YOU WON!. NUMBER OF ATTEMPTS:",attempts_used)
+    print("YOU WON!. NUMBER OF ATTEMPTS:",attempts_used-1)
 """
 ---------- OUTPUT:1 ----------
 Enter a 5-letter word (Attempt:1) : happy
@@ -76,5 +76,5 @@ MATCHED LETTERS :  clock
 Enter a 5-letter word (Attempt:4) : cloth
 Your input is :  cloth
 MATCHED LETTERS :  cloth
-YOU WON!. NUMBER OF ATTEMPTS: 5
+YOU WON!. NUMBER OF ATTEMPTS: 4
 """
