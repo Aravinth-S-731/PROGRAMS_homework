@@ -1,4 +1,4 @@
-menu = {
+menu = { #MENU ITEMS WITH COST AND STOCK DETAILS
     "vadai": {
         'price': 10,
         'inventory': 50,
@@ -19,7 +19,7 @@ menu = {
     }
 }
 
-sales_info = {
+sales_info = {  #SALES INFO DICTIONARY
     'vadai':{
         'count_sold': 0,
         'cost_sold_for': 0,
@@ -36,46 +36,45 @@ sales_info = {
         'remaining': 0
     }
 }
-no_of_restocks,max_restock = 0,5
-total_cost = 0
+no_of_restocks,max_restock = 0,5    #intial restock and Restock limit
+total_cost = 0                      #total limit
 
-def print_menu():
+def print_menu():                   #funtion to print the menu
     print("MENU")
-    for key in menu.keys():
+    for key in menu.keys():         #print menu
         print(key)
 
-def main_fun():
-    global no_of_restocks
+def main_fun():                     #main function to calculate sales
+    global no_of_restocks           #global variable
     option = "y"
-    while option == "y" and no_of_restocks <= max_restock:
+    while option == "y" and no_of_restocks <= max_restock:  #when user want to continue and within restock limit
         item_needed = input("\nWhat do you want : ")
-        if item_needed in menu.keys():
-            quantity = int(input("Enter thr quantity : "))
+        if item_needed in menu.keys():                      #check item in menu
+            quantity = int(input("Enter thr quantity : "))  #if there get quantity
 
-            if quantity <= menu[item_needed]['inventory']:
-                sales_info[item_needed]['count_sold'] += quantity
-                menu[item_needed]['inventory'] -= quantity
-                sales_info[item_needed]['cost_sold_for'] = (quantity * menu[item_needed]['price'])
-                print("Remainig Quantity : ",menu[item_needed]['inventory'])
+            if quantity <= menu[item_needed]['inventory']:  #if entered quantity is less than limit
+                sales_info[item_needed]['count_sold'] += quantity   #add quantity to sales info
+                menu[item_needed]['inventory'] -= quantity          #sub quantity from inventory
+                sales_info[item_needed]['cost_sold_for'] = (quantity * menu[item_needed]['price'])  #calculate price
+                print("Remainig Quantity : ",menu[item_needed]['inventory'])    #print remaining quantity
 
-                if menu[item_needed]['inventory'] <= menu[item_needed]['min_count']:
-                    menu[item_needed]['inventory'] += menu[item_needed]['reorder']
-                    no_of_restocks += 1
+                if menu[item_needed]['inventory'] <= menu[item_needed]['min_count']: #if inventory is low
+                    menu[item_needed]['inventory'] += menu[item_needed]['reorder']  #restock inventory
+                    no_of_restocks += 1                                             #increment resctock count
                     print("Reordered: ",item_needed," Reorder Quantity: ",menu[item_needed]['reorder'])
             else:
                 print("You have order above available quantity. Enter quantity below: ",menu[item_needed]['inventory'])
         else:
             print("ENTER A VALID ITEM IN MENU")
-        option = input("DO YOU WANT TO CONTIUE  (y/n) : ")
-    if no_of_restocks > max_restock:
+        option = input("DO YOU WANT TO CONTIUE  (y/n) : ")  #whether user want to continue
+    if no_of_restocks > max_restock:    #stop calcluation if limit reached
         print("YOU PURCHASED FIVE TIMES. THANK YOU!")
 
-def print_sales_info():
+def print_sales_info():             #function to print sales info
     global total_cost,sales_info
-    #total_items = len(menu.keys())
-    for index in sales_info.keys():
+    for index in sales_info.keys(): #to print sales info of all items in menu
         print("ITEM : ",index,"\tSOLD QUANTITY : ",sales_info[index]['count_sold'],"\tFOR TOTAL COST OF : ",sales_info[index]['cost_sold_for'],"\tREMAINING : ",menu[index]['inventory'])
-        total_cost += sales_info[index]['cost_sold_for']
+        total_cost += sales_info[index]['cost_sold_for'] #total cost of all items
     print("\n\tTOTAL SALES AMOUNT : ",total_cost)
     print("\tNUMBER OF RESTOCKS : ",no_of_restocks)
 
