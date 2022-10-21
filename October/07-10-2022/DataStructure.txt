@@ -1,0 +1,4 @@
+Data Structures : Method used to arrange and process data.
+Two types- 1.Linear & 2.Non-Linear
+Linear data structure is in arranged order. classified into two types,static(fixed memory eg:array) and dynamic(sizes varies according to usage eg:stack)
+Non-linear data structure is not arranged. eg:trees and graphs
