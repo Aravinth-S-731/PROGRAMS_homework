@@ -10,3 +10,14 @@ for index1 in range(0,len(array_elements)):                     #first for loop 
             array_elements[index2] = temp_var
     print(array_elements)                                       #change of each and every number
 print("THE SORTED ARRAY : ",array_elements)                     #print sorted array
+
+"""
+----- OUTPUT -----
+THE UNSORTED ARRAY :  5 16 1 4 7
+[1, 16, 5, 4, 7]
+[1, 4, 16, 5, 7]
+[1, 4, 5, 16, 7]
+[1, 4, 5, 7, 16]
+[1, 4, 5, 7, 16]
+THE SORTED ARRAY :  [1, 4, 5, 7, 16]
+"""
