@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SAYUR</title>
+        <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                $("#double").click(function(e){
+                    var num = $("#num").val();
+                    var url = 'http://127.0.0.1:5000/double/'+num;
+                    $.ajax({
+                        url: url,
+                        success: function(r){
+                            $("#result").text(r);
+                        }
+                    });
+                });
+
+                $("#square").click(function(e){
+                    var num = $("#num").val();
+                    var url = 'http://127.0.0.1:5000/square/'+num;
+                    $.ajax({
+                        url: url,
+                        success: function(r){
+                            $("#result").text(r);
+                        }
+                    });
+                });
+
+                $("#cube").click(function(e){
+                    var num = $("#num").val();
+                    var url = 'http://127.0.0.1:5000/cube/'+num;
+                    $.ajax({
+                        url: url,
+                        success: function(r){
+                            $("#result").text(r);
+                        }
+                    });
+                });
+
+                $("#root").click(function(e){
+                    var num = $("#num").val();
+                    var url = 'http://127.0.0.1:5000/root/'+num;
+                    $.ajax({
+                        url: url,
+                        success: function(r){
+                            $("#result").text(r);
+                        }
+                    });
+                });
+            
+            });
+        </script>
+    </head>
+
+    <body>
+        
+        <h3 style="margin-left: 100px;">MATH CALCULATOR</h3>
+
+        <div class="row">
+        <label for="num">ENTER NUMBER </label>
+        <input id="num" type="number"></input>
+        </div>
+        <br/>
+
+        <div class="row">
+            <label id="result"></label>
+        </div>
+        <br/>
+        <div class="row">
+            <button id="double" style="margin: 20px;">DOUBLE</button>
+            <button id="square" style="margin: 20px;">SQUARE</button>
+            <button id="cube" style="margin: 20px;">CUBE</button>
+            <button id="root" style="margin: 20px;">ROOT</button>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SAYUR</title>
+        <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                $("#add").click(function(e){
+                    var num1 = $("#num1").val();
+                    var num2 = $("#num2").val();
+                    var url = 'http://127.0.0.1:5000/add/'+num1+'/'+num2;
+                    $.ajax({
+                        url: url,
+                        success: function(r){
+                            $("#result").text(r);
+                        }
+                    });
+                });
+
+                $("#sub").click(function(e){
+                    var num1 = $("#num1").val();
+                    var num2 = $("#num2").val();
+                    var url = 'http://127.0.0.1:5000/sub/'+num1+'/'+num2;
+                    $.ajax({
+                        url: url,
+                        success: function(r){
+                            $("#result").text(r);
+                        }
+                    });
+                });
+
+                $("#mul").click(function(e){
+                    var num1 = $("#num1").val();
+                    var num2 = $("#num2").val();
+                    var url = 'http://127.0.0.1:5000/mul/'+num1+'/'+num2;
+                    $.ajax({
+                        url: url,
+                        success: function(r){
+                            $("#result").text(r);
+                        }
+                    });
+                });
+
+                $("#div").click(function(e){
+                    var num1 = $("#num1").val();
+                    var num2 = $("#num2").val();
+                    var url = 'http://127.0.0.1:5000/div/'+num1+'/'+num2;
+                    $.ajax({
+                        url: url,
+                        success: function(r){
+                            $("#result").text(r);
+                        }
+                    });
+                });
+
+            });
+        </script>
+    </head>
+
+    <body>
+
+        <h3 style="margin-left: 100px;">SIMPLE CALCULATOR</h3>
+        
+        <div class="row">
+        <label for="num1">ENTER NUMBER 1 :</label>
+        <input id="num1" type="number"></input>
+        </div>
+        <br/>
+        <div class="row">
+        <label for="num2">ENTER NUMBER 2 :</label>
+        <input id="num2" type="number"></input>
+        </div>
+        <br/>
+        <div class="row">
+            <label id="result"></label>
+        </div>
+        <br/>
+        <div class="row">
+            <button id="add" style="margin: 20px;">ADD</button>
+            <button id="sub" style="margin: 20px;">SUB</button>
+            <button id="mul" style="margin: 20px;">MUL</button>
+            <button id="div" style="margin: 20px;">DIVI</button>
+        </div>
+
+    </body>
+</html>
