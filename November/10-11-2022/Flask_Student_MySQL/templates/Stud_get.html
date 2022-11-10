@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>STUDENT_DB</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $("#store").click(function(e){
+                var id = $("#id").val();
+                var name = $("#name").val();
+                var dept = $("#dept").val();
+                var students = {"id": id,"name": name,"dept": dept};
+                $.ajax({
+                    url: "http://127.0.0.1:5000/insert",
+                    data: students,
+                    type: "POST",
+                    success: function(r){
+                        $("#error").text(r);
+                    },
+                    error: function(r){
+                        $("#error").text("ERROR-DATA NOT UPDATED");
+                    }
+                });
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">STUDENT DATABASE</h1>
+    <br> <br>
+    <div style="margin-left: 35%;">
+        <div>
+            <label>ENTER YOUR ID</label>
+            <input id="id" type="number" style="margin-left: 79px;">
+        </div> <br>
+        <div>
+            <label>ENTER YOUR NAME</label>
+            <input id="name" type="text" style="margin-left: 48.5px;">
+        </div> <br>
+        <div>
+            <label>ENTER DEPARTMENT</label>
+            <input id="dept" type="text" style="margin-left: 40px;">
+        </div> <br> <br> <br> 
+        <div>
+            <button id="store" style="font-size: 15px; margin-left: 16%; height: 30px; width: 100px; background-color: rgb(159, 159, 255);" >SAVE</button>    
+            <label id="error" style="padding-left: 60px; opacity: 35%;"></label>
+        </div>
+    </div>
+
+</body>
+</html>

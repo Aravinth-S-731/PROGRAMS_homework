@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>STUDENT_DB</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $("#display").click(function(e){
+                $.ajax({
+                    url: "http://127.0.0.1:5000/display",
+                    success: function(r){
+                        var temp_var = ''
+                        for (var index in r){
+                            temp_var += r[index];
+                        }
+                        $("#display_lable").text(temp_var);
+                    },
+                    error: function(r){
+                        $("#display_lable").text("ERROR IN STUDENT")
+                    }
+                });
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">STUDENT DATABASE</h1>
+    <h2 style="text-align: center;">ENROLLED STUDENTS</h2> <br>
+    <div style="text-align: center;">
+        <button id="display" style="font-size: 15px;  height: 30px; width: 100px; background-color: rgb(159, 159, 255);">DISPLAY</button>    
+    </div>
+    <br> <br>
+    <div>
+        <div style="text-align: center;">
+           <label id="display_lable">hello</label>
+        </div>
+    </div>
+
+</body>
+</html>
