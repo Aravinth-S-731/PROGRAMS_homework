@@ -11,20 +11,13 @@
                 $.ajax({
                     url: "http://127.0.0.1:5000/display",
                     success: function(r){
-                        document.write("<table border='1' width='450' align='center' style='margin: 0px auto'>");
-                            document.write("<tr bgcolor = 'black' style='font-size: 22px'>");
-                                document.write("<th style='color: white'>ID Num</th>");
-                                document.write("<th style='color: white'>Name</th>");
-                                document.write("<th style='color: white'>Department</th>");
-                            document.write("</tr>");
-                            for (var index in r){
-                                document.write("<tr  bgcolor='lightcyan' style='font-size: 17px'>");
-                                    document.write("<td>"+r[index][0]+"</td>");
-                                    document.write("<td>"+r[index][1]+"</td>");
-                                    document.write("<td>"+r[index][2]+"</td>");
-                                document.write("</tr>");
-                            }
-                        document.write("</table>");
+                        var data = "<table border='1' width='450' align='center' style='margin: 0px auto'>";
+                        data = data + "<tr bgcolor = 'black' style='font-size: 22px'><th style='color: white'>ID Num</th><th style='color: white'>Name</th><th style='color: white'>Department</th></tr>";
+                        for (var index in r){
+                            data = data + "<tr  bgcolor='lightcyan' style='font-size: 17px'><td>"+r[index][0]+"</td><td>"+r[index][1]+"</td><td>"+r[index][2]+"</td></tr>";
+                        }
+                        data = data + "</table>";
+                        $("#tbl").html(data);
                     },
                     error: function(r){
                         $("#error_msg").text("ERROR IN STUDENT")
@@ -48,6 +41,9 @@
         <div style="text-align: center;">
            <label id="error_msg" style="color: red;"></label>
         </div>
+    </div> <br> <br>
+    <div>
+        <label id="tbl"></label>
     </div>
 
 </body>
