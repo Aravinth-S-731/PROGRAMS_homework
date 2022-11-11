@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>STUDENT DETAILS</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $("#display").click(function(e){
+                $.ajax({
+                    url: "http://127.0.0.1:5000/display",
+                    success: function(r){
+                        document.write("<table border='1' width='450' align='center' style='margin: 0px auto'>");
+                            document.write("<tr bgcolor = 'black' style='font-size: 22px'>");
+                                document.write("<th style='color: white'>ID Num</th>");
+                                document.write("<th style='color: white'>Name</th>");
+                                document.write("<th style='color: white'>Department</th>");
+                            document.write("</tr>");
+                            for (var index in r){
+                                document.write("<tr  bgcolor='lightcyan' style='font-size: 17px'>");
+                                    document.write("<td>"+r[index][0]+"</td>");
+                                    document.write("<td>"+r[index][1]+"</td>");
+                                    document.write("<td>"+r[index][2]+"</td>");
+                                document.write("</tr>");
+                            }
+                        document.write("</table>");
+                    },
+                    error: function(r){
+                        $("#error_msg").text("ERROR IN STUDENT")
+                    }
+                });
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">Student Database</h1>
+    <h2 style="text-align: center;">Enrolled Students</h2> <br>
+    <div style="text-align: center;">
+        <button id="display" style="font-size: 15px;  height: 30px; width: 100px; background-color: rgb(159, 159, 255);">DISPLAY</button>    
+    </div>
+    <br> <br>
+    <div>
+        <div style="text-align: center;">
+           <label id="error_msg" style="color: red;"></label>
+        </div>
+    </div>
+
+</body>
+</html>
